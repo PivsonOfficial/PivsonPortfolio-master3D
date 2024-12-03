@@ -125,6 +125,8 @@ function Portfolio() {
 
           </section>
 <div>
+
+
     <section id="section3" >
         <Carousel  activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
@@ -175,66 +177,78 @@ function Portfolio() {
     </section>
 </div>
 
-          <section id="section4">
+
+
+<section id="section4">
     <div className="projekty" style={{ backgroundColor: '#2B2C28' }}>
         <h1 style={{ color: '#BDFFBC' }} className="skillynadpis page-section-heading text-center">Můj flex</h1>
-        <div className="d-flex justify-content-around">
-            <motion.div whileHover={{ scale: 1.2 }}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={logo1} />
-                <Card.Body>
-                    <Card.Title>Html</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-
-                </Card.Body>
-            </Card>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={logo2} />
-                <Card.Body>
-                    <Card.Title>Adobe Photoshop</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-
-                </Card.Body>
-            </Card>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={logo3} />
-                <Card.Body>
-                    <Card.Title>Blender</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-
-                </Card.Body>
-            </Card>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }}>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={logo4} />
-                <Card.Body>
-                    <Card.Title>Programování C#</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-
-                </Card.Body>
-            </Card>
-            </motion.div>
+        <div className="container">
+            <div className="row">
+                {/* Card 1 */}
+                <div className="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-4">
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={logo1} />
+                            <Card.Body>
+                                <Card.Title>Html</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </motion.div>
+                </div>
+                {/* Card 2 */}
+                <div className="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-4">
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={logo2} />
+                            <Card.Body>
+                                <Card.Title>Adobe Photoshop</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </motion.div>
+                </div>
+                {/* Card 3 */}
+                <div className="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-4">
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={logo3} />
+                            <Card.Body>
+                                <Card.Title>Blender</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </motion.div>
+                </div>
+                {/* Card 4 */}
+                <div className="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-4">
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={logo4} />
+                            <Card.Body>
+                                <Card.Title>Programování C#</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </motion.div>
+                </div>
+            </div>
         </div>
-
     </div>
-          </section>
+</section>
+
       </>
     );
 }
