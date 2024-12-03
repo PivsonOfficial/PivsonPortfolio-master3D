@@ -32,20 +32,24 @@
     padding-bottom: 5%;
 }
 .Homepage {
-    background-color: #2B2C28;
+    padding-top:13%;
+    padding-bottom:5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     color: aliceblue;
+    background-image: url(images/blender.png);
 }
 
 .animace {
-    position: absolute;
-    top: 50%;
-    left: 5%;
+    padding-right: 45%;
+    padding-left: 5%;
+    
     color: aliceblue;
 }
 .profil {
-    position: absolute;
-    top: 75%;
-    left: 4.5%;
+    padding-right:2%;
+    padding-top: 5%;
     color: aliceblue;
 
 }

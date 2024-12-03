@@ -59,12 +59,9 @@ function Portfolio() {
     return (
 
       <>
-          <section id="section1">
-              <div className="Homepage">
-
-                  <div  >
-                      <Image className="opacity-50" src={img1} fluid>
-                      </Image>
+          <section id="section1" className="pozadiHome">
+              <div className="Homepage" >
+                          <div>                          
                       <div className="animace">
                           <Card style={{ width: '100%', background: '#2B2C28'}}>
 
@@ -84,23 +81,25 @@ function Portfolio() {
                                           ]}
 
                                           speed={30}
-                                          style={{ fontSize: '2em', display: 'inline-block', color: "aliceblue"}}
+                                          style={{ fontSize: '180%', display: 'inline-block', color: "aliceblue"}}
                                       />
                                   </Card.Text>
                                   <Button href="#section3" variant="primary">Mé projekty</Button>
                               </Card.Body>
                           </Card>
-                      </div>
-                      <div className="profil">
+
+                          <div className="profil">
 
                           <Container>
-                                  <Col xs={6} md={4}>
+                                  <Col xs={10} md={9}>
                                       <Image src={img1} thumbnail />
                                   </Col>
                           </Container>
 
                       </div>
-                  </div>
+                      </div>
+                      
+                      </div>   
 
               </div>
           </section>

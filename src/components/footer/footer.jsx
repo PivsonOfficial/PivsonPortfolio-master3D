@@ -36,7 +36,7 @@ function Footer() {
             <div className="Kontakt">
                 <h2 style={{ color: '#BDFFBC' }}>Zavolejte mi</h2>
 
-                <h3 >Telefon: +420 606 833 724</h3>
+                <h3>Telefon: +420 606 833 724</h3>
                 <h3>Email: pivson.vydra@seznam.cz</h3>
 
             </div>
