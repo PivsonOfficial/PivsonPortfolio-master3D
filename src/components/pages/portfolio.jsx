@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from './images/world.jpg'
 import carousel1 from './images/Ukrajina.jpg'
@@ -17,13 +16,39 @@ import Button from 'react-bootstrap/Button';
 import { motion } from "framer-motion"
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal';
+import {useState, Suspense, useRef} from 'react';
+import {Canvas} from '@react-three/fiber';
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
+
+export function Model(props) {
+    const { nodes, materials } = useGLTF('/type99lmg.gltf')
+    return (
+      <group {...props} dispose={null}>
+        <group position={[-0.041, 0.523, 8.013]} scale={[0.829, 0.799, 1.06]}>
+          <mesh geometry={nodes.Cube004.geometry} material={materials['Material.008']} />
+          <mesh geometry={nodes.Cube004_1.geometry} material={materials.Material} />
+          <mesh geometry={nodes.Cube004_2.geometry} material={materials['Material.005']} />
+          <mesh geometry={nodes.Cube004_3.geometry} material={materials['Material.001']} />
+          <mesh geometry={nodes.Cube004_4.geometry} material={materials['Material.002']} />
+          <mesh geometry={nodes.Cube004_5.geometry} material={materials['Material.003']} />
+        </group>
+      </group>
+    )
+  }
 
 
 export const MyComponent = ({ isVisible }) => (
     <motion.div animate={{ opacity: isVisible ? 1 : 0 }} />
 );
 function Portfolio() {
+
+    const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [fullscreen, setFullscreen] = useState(true);
+
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex) => {
@@ -121,7 +146,27 @@ function Portfolio() {
                 <Carousel.Caption>
                     <h3>Projekt3</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    <Button href="#section3" variant="primary">Detail</Button>
+                   <Button variant="primary" onClick={handleShow}>
+        Detail na 3D objekt
+      </Button>
+
+      <Modal fullscreen={fullscreen}
+      aria-labelledby="contained-modal-title-vcenter"
+      centered show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>      
+            <Canvas camera={{fov:70, position: [50,40,25]}}>
+                <Suspense fallback={null}>
+                    <ambientLight />
+                    <Model /> 
+                    <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+ 
+                </Suspense>
+            </Canvas>     </Modal.Body>
+        
+      </Modal>
 
                 </Carousel.Caption>
             </Carousel.Item>
