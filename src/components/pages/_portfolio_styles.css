@@ -32,13 +32,17 @@
     padding-bottom: 5%;
 }
 .Homepage {
+    
+    background-color:#2B2C28;
+    margin-top:4%;
     padding-top:13%;
     padding-bottom:5%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     color: aliceblue;
-    background-image: url(images/blender.png);
+    background-image: url(images/world.jpg);
+    background-position: center;
 }
 
 .animace {
