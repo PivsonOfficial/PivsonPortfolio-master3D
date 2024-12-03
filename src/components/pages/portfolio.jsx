@@ -26,7 +26,7 @@ export function Model(props) {
     const { nodes, materials } = useGLTF('/type99lmg.gltf')
     return (
       <group {...props} dispose={null}>
-        <group position={[-0.041, 0.523, 8.013]} scale={[0.829, 0.799, 1.06]}>
+        <group position={[0, 0, -20]} scale={[0.829, 0.799, 1.06]}>
           <mesh geometry={nodes.Cube004.geometry} material={materials['Material.008']} />
           <mesh geometry={nodes.Cube004_1.geometry} material={materials.Material} />
           <mesh geometry={nodes.Cube004_2.geometry} material={materials['Material.005']} />
@@ -154,7 +154,7 @@ function Portfolio() {
       aria-labelledby="contained-modal-title-vcenter"
       centered show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>3D ZOBRAZENÍ</Modal.Title>
         </Modal.Header>
         <Modal.Body>      
             <Canvas camera={{fov:70, position: [50,40,25]}}>
