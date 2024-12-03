@@ -23,6 +23,16 @@
 
 }
 
+
+hr{
+    background-color: aliceblue;
+    height: 1vh;
+}
+
+.sekce3 {
+    background-color: #2B2C28;
+}
+
 .Omnenadpis {
     padding-top: 5%;
     padding-bottom: 2%;
